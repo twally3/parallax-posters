@@ -1,0 +1,33 @@
+<svg id="hexagon" data-name="hexagon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+  <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="30" />
+  </filter>
+
+  <defs>
+    <!-- Outer shape -->
+    <symbol id="outer">
+      <path d="M268.7 12c-10.16-4.21-26.79-4.21-37 0l-137 56.74C84.61 73 72.85 84.71 68.64 94.87l-56.74 137c-4.21 10.16-4.21 26.79 0 37l56.74 137c4.21 10.16 16 21.92 26.13 26.13l137 56.74c10.16 4.21 26.79 4.21 37 0l137-56.74c10.16-4.21 21.92-16 26.13-26.13l56.74-137c4.21-10.16 4.21-26.79 0-37l-56.74-137c-4.21-10.16-16-21.92-26.13-26.13z" />
+    </symbol>
+
+    <!-- Inner shape -->
+    <symbol id="inner">
+      <path d="M250.22 56.28l-137.2 56.84-56.84 137.21 56.84 137.21 137.21 56.83 137.2-56.84 56.84-137.21-56.84-137.2-137.21-56.84z"/>
+    </symbol>
+
+    <mask id="outerMask" maskUnits="userSpaceOnUse" x="0" y="0" width="500" height="500">
+      <rect x="0" y="0" width="500" height="500" fill="white"/>
+      <use filter="url(#f1)" xlink:href="#outer" />
+    </mask>
+
+    <mask id="outlineMask" maskUnits="userSpaceOnUse" x="0" y="0" width="500" height="500">
+      <use fill="white" xlink:href="#outer" />
+      <use fill="black" xlink:href="#inner" />
+    </mask>
+  </defs>
+
+  <g mask="url(#outlineMask)">
+    <rect mask="url(#outerMask)"  x="-50%" y="-50%" width="200%" height="200%" fill="black"/>
+    <rect mask="url(#outerMask)"  x="-50%" y="-50%" width="200%" height="200%" fill="black"/>
+    <rect mask="url(#outerMask)"  x="-50%" y="-50%" width="200%" height="200%" fill="black"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "name": "cards",
+  "version": "1.0.0",
+  "description": "Pure unadulterated banter",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel js -d src && webpack ./src/app.js ./src/bundle.js  --optimize-minimize"
+  },
+  "keywords": [
+    "banter"
+  ],
+  "author": "Max Taylor",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

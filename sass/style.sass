@@ -1,0 +1,93 @@
+body, html
+    height: 100%
+    min-height: 100%
+
+body
+    background: #eee
+
+div.container
+    transform-style: preserve-3d
+    transform: perspective(1000px)
+    display: flex
+
+.shine
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(90deg, rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 60%)
+    z-index: 100
+    opacity: 0
+    transition: 0.2s
+
+.poster
+    width: 225px
+    height: 342px
+    position: relative
+    margin: 20px
+    border-radius: 5px
+    // box-shadow: 0 15px 20px rgba(0,0,0,0.4)
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15)
+    overflow: hidden
+    transition: 0.1s
+
+div[class*="layer-"]
+    position: absolute
+    top: -10px 
+    left: -10px
+    right: -10px 
+    bottom: -10px
+    background-size: 100% auto
+    background-repeat: no-repeat
+    background-position: 0 0
+    transition: 0.1s
+
+.layer-1-int
+    background-image: url('https://designmodo.com/demo/apple-tv-parallax/images/1.png')
+.layer-2-int
+    background-image: url('https://designmodo.com/demo/apple-tv-parallax/images/2.png')
+.layer-3-int
+    top: 0 
+    bottom: 0
+    left: 0 
+    right: 0
+    background-image: url('https://designmodo.com/demo/apple-tv-parallax/images/3.png')
+.layer-4-int
+    background-image: url('https://designmodo.com/demo/apple-tv-parallax/images/4.png')
+.layer-5-int
+    background-image: url('https://designmodo.com/demo/apple-tv-parallax/images/5.png')
+
+.layer-3-m
+    background-image: url('../img/1.png')
+
+.layer-2-m
+    background-image: url('../img/2.png')
+    top: 0 
+    bottom: 0
+    left: 0 
+    right: 0
+
+.layer-1-m
+    background-image: url('../img/3.png')
+
+.gradient
+    .layer-1-grad
+        background-image: linear-gradient(0deg,#4064d8,#4ad8dd)
+
+    .layer-2-grad
+        margin: 10px 30px
+        p
+            font-family: sans-serif
+            color: white
+            font-size: 18px
+            position: absolute
+
+    .layer-3-grad
+        margin: 10px 30px
+        p
+            font-family: sans-serif
+            color: white
+            font-size: 16px
+            position: absolute
+            bottom: 0
